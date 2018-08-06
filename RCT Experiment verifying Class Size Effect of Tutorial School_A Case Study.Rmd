@@ -1,0 +1,76 @@
+---
+title: "RCT Experiment Verifying Class Size Effect of Tutorial School: A Case Study"
+author: "Zehua SHI, Jiazhe CHEN, Shi LIANG"
+date: "July 16, 2018"
+output: pdf_document
+---
+
+## Introduction
+
+Some literature review is omitted here at this moment.
+
+Tutorial school is very popular among foreign students in Japan. In order to increase the chance of getting into a college, or even graduate school in Japan, more and more foreign students choose to attend some tutorial school. For students who are still in language school, these institutions fill in the blank that very few language school has enough teaching resources to get their students well-trained on every subjects they are going to be tested, not to mention the examination skills. As the institutions themself, since most of the owners are the predecessors of many famous colleges or universities in Japan, such as The University of Tokyo, they are well-trained to pass these entrance exams, and thus by nature have such an ability to be the tutor of other students to get the tuition fee as profit.
+
+The one tutorial school we planned to run an experiment in can be generally considered as an institution owned by one of the authors. This school targets the entrance examination of most of the graduate school in economic fields that requires the examinees to pass a test based on the undergraduate-level knowledge of microeconomics and macroeconomics. From April 2018, due to the increasing demand of students, the school changed its classroom number into 3, and each of them are not the same. One of the most important aspect is, of course, the size of the classroom are not equally large, which generates the condition of running a RCT experiment to see the class size effect. 
+
+## Experimental Design
+
+The tutorial lectures are given in the following way: there is one main lecture class in weekends. On each of the day, students are going to learn microeconomics and then macroeconomics for 4 hours. This means 8 hours in all each week. The lectures are given by ONLY ONE tutor. Every weekend, this tutor gets into the largest classroom to teach the students there essential knowledge for the entrance exam. Then there are 2 live streaming devices which can synchronize the video(and audio) in the largest classroom to the projector in other 2 classrooms. This ensures that one of the typical problems that we can come up with when verifying the class size effect is not existing in our case: all the classroom share ONE tutor. We don't need to control the effect generated from heterogeneous tutors.
+
+On the main lecture class, students are going to learn microeconomics intensively for 1 month, then macroeconomics for almost the same length. But there are 2 main considerations here that are worth mentioned. First of all, students who come to the school don't necessarily have the same academic background. Some of them are in department of economics when they were undergraduate students, some of them are from mathematically related department such as physics, statistics and mathematics, and the rest of them are from other fields, such as medical school, or even majored in Japanese language. Such a diversity of academic background may potentially contaminate the experimental result in our study, since students from different majors might possibly have different knowledge levels before they enroll into the tutorial school.
+
+Another concern is that there is not only main lecture class that students can attend in the school. There are a few other classes that is supposed to be some complementary class for those students who think they need to learn more to be as good as other students. For example, there are also classes that give lectures on econometrics and mathematical tools for basic economics studies. Such a problem also have effects on the potential results of our experiment, since students who learn more on economic-related fields will also enhance their understanding on the contents given on the main lecture class. On the other hand, this also gives us an oppotunity to find some measurements to approximate the learning motivation of particular students by counting the number of alternative classes he has enrolled in. Although all the classes must be paid to enroll in, which makes such a measurement less attempting, it is still viable if we can control the income level of the students getting from their parents and part-time jobs.
+
+In order to eliminate the effects of such 2 sources, we plan to randomize the student to get them into 2 relatively smaller classroom(that is, not the largest one) over their academic backgrounds and their attendence of other classes than the main lecture class. If we can successfully randomize the students, then we might be able to compare the outcome of learning in the smallest classroom with that in the middle-sized classroom, that is, the effect of class size.
+
+The outcome is going to be measured by standardized choice problem examinations. After the first month, students are supposed to know the basics of microeconomics, and an exam containing 25 problems from microeconomics is going to be taken. After that, when the end of second month comes, another exam of macroeconomics of same form is going to be taken. By using these exam score data, we could measure how outcome will change after different class size, controlling other control variables that are essential.
+
+The goal of the experiment is to understand the effect of alternative educational treatments under a non-traditional environment, i.e., tutorial school in our case, and  different channels which takes effect through. By conducting such an empirical experiment, potentially it will help researchers to design a better educational program, both on the traditional schooling environment and non-traditional circumstances. 
+
+## Data to be Collected
+
+Currently there are some variables that we planned to collect data from.
+
+1. Gender;
+2. Family Income/Income from parents;
+3. Education backgrounds of parents;
+4. Income from part-time jobs;
+5. Disposable learning time;
+6. College name and department during undergraduate study;
+7. Expiration date of visa;
+8. Mathematical scores before enrollment of the school(Calculus, Linear Algebra, Probability and Statistics);
+9. Economics scores before enrollment of the school(Microeconomics, Macroeconomics, Econometrics);
+10. Complementary classes the student plan to enroll in(i.e., Mathematic class, Econometric class, etc.);
+11. Class size the student will be in after randomization;
+12. The specific seat that the student will be sit in the classroom he is in;
+13. Baseline exam of mathematics and economics basic right after enrollment;
+14. Exam score of microeconomics after the first month;
+15. Exam score of macroeconomics after the second month;
+
+The reduced-form regression model can be constructed as follows:
+
+$$
+Y_i=\alpha T_i+X_i'\beta+\epsilon_i,i=1, \dots, n.
+$$
+
+$Y_i$ is the outcome of student $i$, namely, exam scores of $i$. $T_i$ is the treatment variable which represents the class size treatment. $T=1$ if i is in small-sized class, and $T=0$ if i is in middle-sized class. $X_i$ stands for other personal and family characteristics of $i$ which needs to be controlled in the regression model.
+
+## Potential Problems
+
+Currently there are mainly 2 issues that we are worrying about. One of them is the missing data issue due to the choice result of students. During the class period, often some of the students become drop-outs when they feel that they are not able to catch up the class progress or they don't have enough money to continue the learning in the school. When such drop-outs occurs, 2 things happen. One is that we will lose part of the data due to the drop-outs. The other one is that since other students who decide to continue the learning want to sit on the seats in these front rows left by these drop-outs, there will be a queuing system for the students in the back side rows to change their seats to front rows, or even out of the middle-sized classroom and small-sized classroom to the large-sized classroom, where we are not going to have any randomization. But if the chance of being a drop-out is related to his academic background and learning motivation systematically, by randomization, we can ensure that the chance of being a drop-out is almost the same between the 2 different classrooms that we are interested in. After drop-out happens, the remaining students will be able to change their seats according to their enrollment date order. Again, if our randomization is successful, the chance of being able to change their seat should be equal. Since changing seats is only possible once a month, if a student changed his seat in the second month, the first exam score can show his outcome of sitting in the original seat(front rows or back rows), while the second exam score can be considered as the blended effect of sitting backward and forward, within the classroom of same size.
+
+Another issue is about the sample size. Currently there are about 200 students enrolled in the main lecture class each semester, but over half of them are in the largest classroom, where we are not allowed to do experiments there. The rest of them are then planned to be randomly distributed into 2 classrooms we've mentioned before. This causes such a problem that the sample size is relatively small comparing with the researches closely related to this field as far as we know. Since students of the school will generally leave after 1 semester, one possible alternative is to collect the data from students of different semester, and treat them as pooled cross-section data. By this mean we can solve the problem of sample size, and can thus increase the accuracy of estimation.
+
+## Questionnaires for Students 
+
+Coming soon.
+
+
+## Data Collecting Agreements for Students
+
+Coming soon.
+
+## Training Contracts of Research Assistants(If Any)
+
+Coming soon.
+
